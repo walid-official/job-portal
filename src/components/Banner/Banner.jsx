@@ -6,10 +6,11 @@ import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
   return (
     <div
-      className="bg-center bg-cover"
-      style={{
-        backgroundImage: `url(https://img.freepik.com/premium-photo/blue-background-with-light-blue-background_835197-1865.jpg)`,
-      }}
+      className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] "
+      style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)' }}
+      // style={{
+      //   backgroundImage: `url(https://img.freepik.com/premium-photo/blue-background-with-light-blue-background_835197-1865.jpg)`,
+      // }}
     >
       <div className="hero md:py-[152px] py-[100px] ">
         <div className="hero-content flex-col lg:flex-row-reverse gap-6">
@@ -55,7 +56,7 @@ const Banner = () => {
             Find Your Dream Job, Hire The Perfect Talent!
           </h1> */}
             <p className="py-6 text-white">
-            Bridging opportunities and talent, our platform empowers job seekers to land their dream roles and helps employers connect with the right professionals to grow their teams. Whether you're an individual striving to kickstart your career, a seasoned professional aiming for the next big opportunity, or an employer seeking the perfect candidate to drive your business forward,
+            Bridging opportunities and talent, our platform empowers job seekers to land their dream roles and helps employers connect with the right professionals to grow their teams. Whether you're an individual striving to kickstart your career, a seasoned professional aiming for the next big opportunity.
             </p>
             <div className="md:w-[80%]">
               <label className="input input-bordered rounded-sm flex items-center gap-2">
@@ -65,7 +66,7 @@ const Banner = () => {
                   placeholder="Search By Title"
                 />
                 <div className="">
-                  <button className="btn rounded-sm bg-[#0f70c2] hover:bg-[#0f70c2] text-white ">
+                  <button className="btn rounded-sm bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] hover:bg-[#0f70c2] text-white ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"

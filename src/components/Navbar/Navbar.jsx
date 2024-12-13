@@ -13,7 +13,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-gradient-to-r from-[#0f70c2] to-[#0f70c2] py-4">
+    <div className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] py-4">
       <div className="w-[82%] mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -78,8 +78,8 @@ const Navbar = () => {
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
             </label>
-            <button className="btn bg-[#0f70c2] hover:bg-[#0f70c2] text-white">Login</button>
-            <button className="btn bg-[#0f70c2] hover:bg-[#0f70c2] text-white">Register</button>
+            <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">Login</button>
+            <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">Register</button>
           </div>
         </div>
       </div>

@@ -1,0 +1,43 @@
+[
+    {
+      "categoryName": "Software Development",
+      "availableJobs": 1250,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/lightning.svg"
+    },
+    {
+      "categoryName": "Data Science",
+      "availableJobs": 820,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/retail.svg"
+    },
+    {
+      "categoryName": "Digital Marketing",
+      "availableJobs": 540,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/marketing.svg"
+    },
+    {
+      "categoryName": "Graphic Design",
+      "availableJobs": 675,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/management.svg"
+    },
+    {
+      "categoryName": "Customer Support",
+      "availableJobs": 950,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/human.svg"
+    },
+    {
+      "categoryName": "Project Management",
+      "availableJobs": 400,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/finance.svg"
+    },
+    {
+      "categoryName": "Content Writing",
+      "availableJobs": 720,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/content.svg"
+    },
+    {
+      "categoryName": "Human Resources",
+      "availableJobs": 310,
+      "imageUrl": "https://jobbox-html-frontend.vercel.app/assets/imgs/page/homepage1/research.svg"
+    }
+  ]
+  
