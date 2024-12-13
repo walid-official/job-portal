@@ -12,6 +12,17 @@ const Navbar = () => {
     </>
   );
 
+  // const setDarkMode = () => {
+  //   document.querySelector('body').setAttribute('data-theme','dark')
+  // }
+  // const setLightMode = () => {
+  //   document.querySelector('body').setAttribute('data-theme','light')
+  // }
+
+  // const toggleTheme = (e) => {
+  //   if(e.target.checked) setDarkMode();
+  //   else setLightMode();
+  // }
   return (
     <div className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] py-4">
       <div className="w-[82%] mx-auto">
