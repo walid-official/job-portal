@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div
       className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] "
-      style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)' }}
+      // style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)' }}
       // style={{
       //   backgroundImage: `url(https://img.freepik.com/premium-photo/blue-background-with-light-blue-background_835197-1865.jpg)`,
       // }}

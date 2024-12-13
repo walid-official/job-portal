@@ -13,15 +13,15 @@ const Jobs = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="">
-        <h2 className="text-center font-bold text-3xl pb-6">Jobs of the Day</h2>
-        <p className="text-center md:w-[70%] mx-auto">
+        <h2 className="text-center font-bold text-4xl pb-6">Jobs of <span className="text-[#0f71c2ae]" >the Day</span></h2>
+        <p className="text-center md:w-[50%] mx-auto">
           Discover the latest and most exciting job opportunities of the day
           across various industries. From tech and design to marketing and
           management, find roles tailored to your skills and career goals. Don’t
           miss your chance to apply today!
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4 py-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 py-20">
       {
         jobs.map((job,index) => <Job key={index} job={job}></Job> )
       }
