@@ -1,30 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets/logo.png";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 const Navbar = () => {
+  const { user, userSignOut } = useContext(AuthContext);
+  const handleLogOutUser = () => {
+    userSignOut()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const links = (
     <>
-   
-        <NavLink><li className="font-medium text-[16px]">Home</li></NavLink>
-        <NavLink><li className="font-medium text-[16px]">All Jobs</li></NavLink>
-        <NavLink><li className="font-medium text-[16px]">Add Jobs</li></NavLink>
-        <NavLink><li className="font-medium text-[16px]">Blogs</li></NavLink>
+      <NavLink>
+        <li className="font-medium text-[16px]">Home</li>
+      </NavLink>
+      <NavLink>
+        <li className="font-medium text-[16px]">All Jobs</li>
+      </NavLink>
+      <NavLink>
+        <li className="font-medium text-[16px]">Add Jobs</li>
+      </NavLink>
+      <NavLink to="applications">
+        <li className="font-medium text-[16px]">My Applications</li>
+      </NavLink>
     </>
   );
 
-  // const setDarkMode = () => {
-  //   document.querySelector('body').setAttribute('data-theme','dark')
-  // }
-  // const setLightMode = () => {
-  //   document.querySelector('body').setAttribute('data-theme','light')
-  // }
-
-  // const toggleTheme = (e) => {
-  //   if(e.target.checked) setDarkMode();
-  //   else setLightMode();
-  // }
   return (
-    <div className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] py-4">
+    <div className="bg-white text-[#000] py-4">
       <div className="w-[82%] mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -56,16 +64,19 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <div className="flex gap-3 items-center font-bold text-white text-2xl">
-              <img className="w-12 h-12 object-cover" src={logo} />
+            <div className="flex gap-3 items-center font-bold text-2xl">
+              <img className="w-10 h-10 object-cover" src={logo} />
               <h2>JobHaven</h2>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 space-x-8 text-white">{links}</ul>
+            <ul className="menu menu-horizontal px-1 space-x-8">
+              {links}
+              {/* <li>{user?.email}</li> */}
+            </ul>
           </div>
           <div className="navbar-end space-x-4">
-            <label className="swap swap-rotate text-white">
+            <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
               <input
                 type="checkbox"
@@ -89,8 +100,49 @@ const Navbar = () => {
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
             </label>
-            <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">Login</button>
-            <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">Register</button>
+            {/* {
+              user ? <NavLink to="login">
+              <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">
+                Log-out
+              </button>
+            </NavLink> 
+
+            
+            } */}
+
+            {user ? (
+              <div className="flex gap-4">
+                <div
+                  className=" tooltip tooltip-bottom"
+                  data-tip={user?.displayName}
+                >
+                  <img
+                    src={user?.photoURL}
+                    className="w-12 h-12 object-cover rounded-full"
+                    alt=""
+                  />
+                </div>
+                <button
+                  onClick={handleLogOutUser}
+                  className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="">
+                <NavLink to="login">
+                  <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">
+                    Login
+                  </button>
+                </NavLink>
+                <NavLink to="register">
+                  <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">
+                    Register
+                  </button>
+                </NavLink>
+              </div>
+            )}
           </div>
         </div>
       </div>

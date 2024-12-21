@@ -12,7 +12,7 @@ const Banner = () => {
       //   backgroundImage: `url(https://img.freepik.com/premium-photo/blue-background-with-light-blue-background_835197-1865.jpg)`,
       // }}
     >
-      <div className="hero md:py-[152px] py-[100px] ">
+      <div className="hero md:py-[170px] py-[100px] ">
         <div className="hero-content flex-col lg:flex-row-reverse gap-6">
           <motion.div
             animate={{ y: 20, x: 20 }}
@@ -58,7 +58,7 @@ const Banner = () => {
             <p className="py-6 text-white">
             Bridging opportunities and talent, our platform empowers job seekers to land their dream roles and helps employers connect with the right professionals to grow their teams. Whether you're an individual striving to kickstart your career, a seasoned professional aiming for the next big opportunity.
             </p>
-            <div className="md:w-[80%]">
+            {/* <div className="md:w-[80%]">
               <label className="input input-bordered rounded-sm flex items-center gap-2">
                 <input
                   type="text"
@@ -83,7 +83,7 @@ const Banner = () => {
                   </button>
                 </div>
               </label>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

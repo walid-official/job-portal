@@ -1,20 +1,20 @@
 const CategoryCard = ({ category }) => {
   const { imageUrl, categoryName, availableJobs } = category;
   return (
-    <div className="group">
-      <div className="card bg-base-100 text-[#090505] duration-700 relative shadow-xl overflow-hidden">
-        {/* Hover overlay */}
-        <div className="absolute top-0 left-0 inset-0 bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] opacity-0 group-hover:opacity-50 transition-opacity duration-700 rounded-xl"></div>
-        {/* Card content */}
-        <div className="card-body relative z-10">
-          <div className="card-actions justify-center">
-            <img src={imageUrl} alt="" />
-          </div>
-          <p className="text-center font-bold text-xl py-4">{categoryName}</p>
-          <p className="text-center text-[18px]">{availableJobs} jobs</p>
-        </div>
+    <div className="relative group">
+    <div className="card bg-base-100 py-10 text-[#090505] shadow-xl overflow-hidden duration-700">
+      {/* Content Container */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+        <img src={imageUrl} alt="Category" className="max-w-full" />
+        <p className="text-center font-bold text-xl py-4">{categoryName}</p>
+        <p className="text-center text-lg">{availableJobs} jobs</p>
       </div>
+  
+      {/* Hover Background */}
+      <div className="absolute top-full left-0 w-full h-full bg-transparent transition-all duration-1000 group-hover:top-0 group-hover:bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] z-0"></div>
     </div>
+  </div>
+  
   );
 };
 

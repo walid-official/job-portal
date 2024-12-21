@@ -21,7 +21,7 @@ const JobFinder = () => {
               <div className="flex gap-3 items-center text-[#090e18]">
                 <div className="">
                   <h2 className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] w-9 h-9 rounded-full flex justify-center items-center">
-                    <i class="fa-solid fa-check text-white"></i>
+                    <i className="fa-solid fa-check text-white"></i>
                   </h2>
                 </div>
                 <h2>Search For relevant Jobs in Your Field</h2>
@@ -29,7 +29,7 @@ const JobFinder = () => {
               <div className="flex gap-3  items-center text-[#090e18]">
                 <div className="">
                   <h2 className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] w-9 h-9 rounded-full flex justify-center items-center">
-                    <i class="fa-solid fa-check text-white"></i>
+                    <i className="fa-solid fa-check text-white"></i>
                   </h2>
                 </div>
                 <h2>Fill Application Form and Attach Resume</h2>
@@ -37,7 +37,7 @@ const JobFinder = () => {
               <div className="flex gap-3 items-center text-[#090e18]">
                 <div className="">
                   <h2 className="bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] w-9 h-9 rounded-full flex justify-center items-center">
-                    <i class="fa-solid fa-check text-white"></i>
+                    <i className="fa-solid fa-check text-white"></i>
                   </h2>
                 </div>
                 <h2>Use Out Expert Advice and Follow Up</h2>

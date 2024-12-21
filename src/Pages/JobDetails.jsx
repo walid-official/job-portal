@@ -1,8 +1,10 @@
-import { h2 } from "motion/react-client";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 
-const Job = ({ job }) => {
+const JobDetails = () => {
+  const jobData = useLoaderData();
+  console.log(jobData);
+
   const {
     _id,
     company_logo,
@@ -15,9 +17,10 @@ const Job = ({ job }) => {
     applicationDeadline,
     salaryRange = {},
     company,
-  } = job;
+  } = jobData;
+
   return (
-    <div>
+    <div className="w-[60%] mx-auto my-10">
       <div className="card bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] text-white shadow-xl">
         <div className="card-body">
           <div className="flex gap-4">
@@ -29,8 +32,12 @@ const Job = ({ job }) => {
           </div>
           <div className="flex gap-4 items-center py-4">
             <p className="font-semibold text-xl">{title}</p>
+            <p className="font-semibold text-xl">{category}</p>
             <div className="badge bg-gradient-to-r from-[#0f71c2ae] to-[#55a1ffda]">
               {jobType}
+            </div>
+            <div className="badge bg-gradient-to-r from-[#0f71c2ae] to-[#55a1ffda]">
+              {applicationDeadline}
             </div>
           </div>
           <p>{description}</p>
@@ -47,9 +54,9 @@ const Job = ({ job }) => {
             </h2>
           </div>
           <div className="card-actions justify-start">
-            <Link to={`jobDetails/${_id}`}>
+            <Link to={`/applicationForm/${_id}`}>
               <button className="btn bg-gradient-to-r from-[#0f70c2] to-[#55a1ffda] text-white">
-                Show Details
+                Apply Job
               </button>
             </Link>
           </div>
@@ -59,4 +66,4 @@ const Job = ({ job }) => {
   );
 };
 
-export default Job;
+export default JobDetails;
