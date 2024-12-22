@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../components/AuthProvider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+
 const axiosInstance = axios.create({
     baseURL: 'http://localhost:5000',
     withCredentials: true,
