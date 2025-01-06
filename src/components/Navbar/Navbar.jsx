@@ -32,7 +32,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-white text-[#000] py-4">
+    <div className="bg-[#070231] text-[#000] py-4">
       <div className="w-[82%] mx-auto">
         <div className="navbar">
           <div className="navbar-start">
@@ -59,18 +59,18 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content text-white bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 {links}
               </ul>
             </div>
             <div className="flex gap-3 items-center font-bold text-2xl">
-              <img className="w-10 h-10 object-cover" src={logo} />
-              <h2>JobHaven</h2>
+              {/* <img className="w-10 h-10 object-cover" src={logo} /> */}
+              <h2 className="text-white">JobHaven</h2>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 space-x-8">
+            <ul className="menu menu-horizontal px-6 py-4 rounded-full text-white bg-gradient-to-r from-[#131341fc] via-[#131341fc] to-[#131341fc] shadow-2xl space-x-8">
               {links}
               {/* <li>{user?.email}</li> */}
             </ul>
@@ -130,14 +130,14 @@ const Navbar = () => {
                 </button>
               </div>
             ) : (
-              <div className="">
+              <div className="space-x-3">
                 <NavLink to="login">
-                  <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">
+                  <button className="px-7 py-3 rounded-lg shadow-xl bg-gradient-to-r from-[#131341fc] via-[#131341fc] to-[#131341fc] text-white">
                     Login
                   </button>
                 </NavLink>
                 <NavLink to="register">
-                  <button className="btn bg-gradient-to-r from-[#55a1ff] to-[#55a1ffda]  hover:bg-[#0f70c2] text-white">
+                  <button className="px-7 py-3 rounded-lg shadow-xl bg-gradient-to-r from-[#131341fc] via-[#131341fc] to-[#131341fc] text-white">
                     Register
                   </button>
                 </NavLink>
