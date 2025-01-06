@@ -21,7 +21,7 @@ const ApplicationForm = () => {
         const applicantData = {
           ...initialData,email
         }
-        axios.post('http://localhost:5000/applications',applicantData)
+        axios.post('https://job-portal89.vercel.app/applications',applicantData)
         .then(response => {
           console.log(response.data);
         })

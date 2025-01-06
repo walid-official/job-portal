@@ -30,12 +30,12 @@ const router = createBrowserRouter([
         {
           path: "jobDetails/:id",
           element: <JobDetails></JobDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+          loader: ({params}) => fetch(`https://job-portal89.vercel.app/jobs/${params.id}`)
         },
         {
           path: "applicationForm/:id",
           element: <ApplicationForm></ApplicationForm>,
-          loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+          loader: ({params}) => fetch(`https://job-portal89.vercel.app/jobs/${params.id}`)
         },
         {
           path: "applications",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         {
           path: "updateApplication/:id",
           element: <UpdateApplications></UpdateApplications>,
-          loader: ({params}) => fetch(`http://localhost:5000/applications/${params.id}`)
+          loader: ({params}) => fetch(`https://job-portal89.vercel.app/applications/${params.id}`)
         }
       ]
     },

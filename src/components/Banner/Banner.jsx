@@ -12,7 +12,7 @@ const Banner = () => {
       //   backgroundImage: `url(https://img.freepik.com/premium-photo/blue-background-with-light-blue-background_835197-1865.jpg)`,
       // }}
     >
-      <div className="hero md:py-[170px] py-[100px] ">
+      <div className="hero md:py-[180px] py-[100px] ">
         <div className="hero-content flex-col lg:flex-row-reverse gap-6">
           <motion.div
             animate={{ y: 20, x: 20 }}

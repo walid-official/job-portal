@@ -6,7 +6,7 @@ import Job from "./Job";
 const Jobs = () => {
     const [jobs,setJobs] = useState([])
   useEffect(() => {
-    axios.get("http://localhost:5000/jobs").then((data) => {
+    axios.get("https://job-portal89.vercel.app/jobs").then((data) => {
         setJobs(data.data);
     });
   }, []);

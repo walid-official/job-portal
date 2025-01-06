@@ -23,7 +23,7 @@ const UpdateApplications = () => {
 
 
 
-    axios.patch(`http://localhost:5000/applications/${id}`,updateData)
+    axios.patch(`https://job-portal89.vercel.app/applications/${id}`,updateData)
     .then(response => {
         console.log(response.data);
     })

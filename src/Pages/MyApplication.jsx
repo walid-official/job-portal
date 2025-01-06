@@ -11,7 +11,7 @@ const MyApplication = () => {
   const axiosSecure = useAxios();
 
   useEffect(() => {
-    // axios.get(`http://localhost:5000/applications/${user?.email}`,{withCredentials: true})
+    // axios.get(`https://job-portal89.vercel.app/applications/${user?.email}`,{withCredentials: true})
     // .then(res =>  setApplications(res.data))
     axiosSecure
       .get(`/applications/${user?.email}`)
@@ -22,7 +22,7 @@ const MyApplication = () => {
 
   const handleDeleteApplication = (id) => {
     axios
-      .delete(`http://localhost:5000/applications/${id}`)
+      .delete(`https://job-portal89.vercel.app/applications/${id}`)
       .then((response) => {
         console.log(response);
         const remaining = applications.filter(
